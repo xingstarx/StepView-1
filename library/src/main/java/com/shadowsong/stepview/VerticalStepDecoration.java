@@ -50,6 +50,9 @@ public class VerticalStepDecoration extends StepDecoration{
             }
         }
         if (parent.getChildCount() > 0) {
+            if (currentStep == 0) {
+                startY = startY + parent.getChildAt(0).getHeight() / 2;
+            }
             endY = parent.getHeight() - parent.getChildAt(0).getHeight() / 2;
         }
         c.drawLine(width / 2, startY, width / 2, centerY, linePaint);
