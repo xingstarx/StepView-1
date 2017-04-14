@@ -25,12 +25,9 @@ public abstract class StepDecoration extends RecyclerView.ItemDecoration {
     linePaint.setColor(0xff11cd6e);
     linePaint.setStrokeWidth(3);
 
-    dashPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    dashPaint.setAntiAlias(true);
-    dashPaint.setStyle(Paint.Style.STROKE);
+    dashPaint = new Paint();
     dashPaint.setColor(0xff11cd6e);
     dashPaint.setStrokeWidth(3);
-    dashPaint.setPathEffect(new DashPathEffect(new float[] {5, 10}, 0));
 
     path = new Path();
   }
