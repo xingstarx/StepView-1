@@ -42,21 +42,18 @@ public class VerticalStepDecoration extends StepDecoration{
             }
             if (i == childCount - 1) {
                 if (params.getViewLayoutPosition() == parent.getAdapter().getItemCount() - 1) {
-                    endY = child.getTop()+child.getHeight()/2;
+                    endY = child.getTop() + child.getHeight() / 2;
                 }
                 if (params.getViewLayoutPosition() < currentStep) {
                     centerY = parent.getHeight();
                 }
             }
         }
-
+        if (parent.getChildCount() > 0) {
+            endY = parent.getHeight() - parent.getChildAt(0).getHeight() / 2;
+        }
         c.drawLine(width / 2, startY, width / 2, centerY, linePaint);
-
-        path.reset();
-        path.moveTo(width / 2, centerY);
-        path.lineTo(width / 2, endY);
-        c.drawPath(path, dashPaint);
-
+        c.drawLine(width / 2, centerY + 1, width / 2, endY, dashPaint);
 
         for (int i = 0; i < childCount; i++) {
             final View child = parent.getChildAt(i);
