@@ -3,6 +3,24 @@ Step by step，just use HorizontalStepDecoration，VerticalStepDecoration. step 
 # ATTENTION
 This library is NOT a view, but a ItemDecoration for RecyclerView. It's easier to use, and can do the same as [StepView](https://github.com/baoyachi/StepView) and [Android-StepsView](https://github.com/anton46/Android-StepsView)
 # How to use
+
+Add it in your root build.gradle at the end of repositories:
+```
+allprojects {
+    repositories {
+      maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+add it in your app build.gradle
+```
+dependencies {
+   compile 'com.github.xingstarx:stepView-1:master-SNAPSHOT'
+}
+```
+
+
 ```
 // get a RecyclerView
 recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
