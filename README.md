@@ -16,7 +16,7 @@ allprojects {
 add it in your app build.gradle
 ```
 dependencies {
-   compile 'com.github.xingstarx:stepView-1:master-SNAPSHOT'
+   compile 'com.github.xingstarx:stepView-1:1.0.1'
 }
 ```
 
