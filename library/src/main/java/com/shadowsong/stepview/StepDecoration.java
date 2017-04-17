@@ -44,5 +44,9 @@ public abstract class StepDecoration extends RecyclerView.ItemDecoration {
   public void setLineColor(int lineColor) {
     linePaint.setColor(lineColor);
   }
+  
+  public void setCurrentStep(int currentStep) {
+    this.currentStep = currentStep;
+  }
 
 }
