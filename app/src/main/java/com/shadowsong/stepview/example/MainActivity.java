@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 .lineWidth(3)
                 .lineColor(0xff11cd6e)
                 .dashColor(0x5a5a5a5a)
-                .currentStep(0)
+                .currentStep(1)
                 .build();
 
 
