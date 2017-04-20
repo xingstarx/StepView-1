@@ -22,8 +22,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void initList() {
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-        // recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,
-        // LinearLayoutManager.VERTICAL));
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false) {
                     @Override
                     public boolean canScrollVertically() {
@@ -43,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
 
-        recyclerView.addItemDecoration(stepDecoration);
+//        recyclerView.addItemDecoration(stepDecoration);
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
         recyclerView.setAdapter(new ItemAdapter());
 
     }
